@@ -1,0 +1,26 @@
+name: Deploy Portfolio to AWS Amplify
+
+on:
+  push:
+    branches:
+      - main  # Change this if you use a different branch for deployment
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    
+
+    - name: Trigger AWS Amplify Deployment
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: 'us-west-2'  # Update with your AWS region
+        AMPLIFY_APP_ID: 'd147cvyfumg9ll'  # Replace with your actual Amplify App ID
+        BRANCH: 'main'  # Update this if you deploy from a different branch
+      run: |
+        aws amplify start-job --app-id $AMPLIFY_APP_ID --branch-name $BRANCH --job-type RELEASE
