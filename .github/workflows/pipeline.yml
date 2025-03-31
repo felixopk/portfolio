@@ -3,7 +3,7 @@ name: Deploy Portfolio to AWS Amplify
 on:
   push:
     branches:
-      - main  # Change this if you use a different branch for deployment
+      - development  # Change this if you use a different branch for deployment
 
 jobs:
   deploy:
