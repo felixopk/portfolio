@@ -3,7 +3,11 @@ name: Deploy Portfolio to AWS Amplify
 on:
   push:
     branches:
+<<<<<<< HEAD
       - development  # Change this if you use a different branch for deployment
+=======
+      - main  # Change this if you use a different branch for deployment
+>>>>>>> d6af183c959bf4d92016e4097efc02f80ba80c23
 
 jobs:
   deploy:
@@ -23,4 +27,8 @@ jobs:
         AMPLIFY_APP_ID: 'd147cvyfumg9ll'  # Replace with your actual Amplify App ID
         BRANCH: 'main'  # Update this if you deploy from a different branch
       run: |
+<<<<<<< HEAD
         aws amplify start-job --app-id $AMPLIFY_APP_ID --branch-name $BRANCH --job-type RELEASE
+=======
+        aws amplify start-job --app-id $AMPLIFY_APP_ID --branch-name $BRANCH --job-type RELEASE
+>>>>>>> d6af183c959bf4d92016e4097efc02f80ba80c23
