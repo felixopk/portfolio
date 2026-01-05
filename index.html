@@ -3,60 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio - OPKCloudz</title>
+    <title>Felix Oppong | DevOps Engineer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <header>
+
+    <!-- HERO -->
+    <header class="hero">
         <img src="/images/profile12.jpg" alt="Felix Oppong" class="profile-pic">
         <h1>Felix Oppong</h1>
-        <p>DevOps Engineer | CI/CD | Cloud Automation | Kubernetes</p>
+        <p class="subtitle">DevOps Engineer · Kubernetes · CI/CD · Cloud Automation</p>
+        <p class="tagline">
+            I design, deploy, and operate real systems — not just tutorials.
+        </p>
     </header>
 
+    <!-- NAV -->
     <nav>
         <ul>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#homelab">Homelab</a></li>
+            <li><a href="#projects">Implementation</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
+    <!-- ABOUT -->
     <section id="about">
         <h2>About Me</h2>
-        <p>Hi, I'm Felix Oppong, a passionate self-taught  DevOps Engineer specializing in cloud infrastructure, CI/CD automation and Kubernetes deployments.</p>
+        <p>
+            I am a DevOps Engineer focused on Kubernetes, CI/CD pipelines,
+            containerized applications, and cloud infrastructure.
+        </p>
+        <p>
+            I learn and validate my skills by building production-style systems,
+            running them on my own homelab, and debugging real failures end-to-end.
+        </p>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
+    <!-- HOMELAB -->
+    <section id="homelab">
+        <h2>Production-Style DevOps Homelab</h2>
+        <p>
+            This is my primary DevOps project and learning environment.
+            It simulates how real systems are built, deployed, and operated in production.
+        </p>
+
         <ul>
-            
-            <li><a href="https://github.com/felixopk/microservices-app" target="_blank">Microservices-App </a></li>
-            <li><a href="https://github.com/felixopk/microservices-app" target="_blank">Cloud Monitoring with Prometheus & Grafana</a></li>
-            <li><a href="https://github.com/felixopk/cloud-native-ci-cd" target="_blank">AWS Infrastructure Automation with Terraform</a></li>
-             <li><a href="https://github.com/felixopk/go-web-app" target="_blank">Deployments of an Application on AWS EKS and creating a pipline to automate the process. </a></li>
+            <li>✔ Bare-metal Kubernetes (single-node homelab)</li>
+            <li>✔ Frontend & backend deployments</li>
+            <li>✔ NGINX Ingress with path-based routing</li>
+            <li>✔ CI/CD with GitHub Actions (tag-based releases)</li>
+            <li>✔ Private container images (GHCR + imagePullSecrets)</li>
+            <li>✔ Real debugging: ImagePullBackOff, 502/503, crashes</li>
+        </ul>
+
+        <p>
+            👉 <strong>Main Homelab Repository:</strong><br>
+            <a href="https://github.com/felixopk/ecommerce-platform" target="_blank">
+                github.com/felixopk/ecommerce-platform
+            </a>
+        </p>
+    </section>
+
+    <!-- PROJECTS / IMPLEMENTATION -->
+    <section id="projects">
+        <h2>What This System Implements</h2>
+
+        <ul>
+            <li>
+                <strong>E-commerce Platform on Kubernetes</strong><br>
+                Containerized frontend and backend deployed on Kubernetes with services
+                and ingress routing.<br>
+                <a href="https://github.com/felixopk/ecommerce-platform" target="_blank">
+                    View implementation
+                </a>
+            </li>
+
+            <li>
+                <strong>CI/CD Pipeline (Build → Scan → Deploy)</strong><br>
+                GitHub Actions pipeline that builds Docker images, scans them,
+                pushes to GHCR, and deploys to Kubernetes using version tags.<br>
+                <a href="https://github.com/felixopk/ecommerce-platform" target="_blank">
+                    View CI/CD pipeline
+                </a>
+            </li>
+
+            <li>
+                <strong>Kubernetes Networking & Operations</strong><br>
+                Hands-on experience with Services, Ingress, pod lifecycle,
+                and failure debugging in a live cluster.<br>
+                <a href="https://github.com/felixopk/ecommerce-platform" target="_blank">
+                    View Kubernetes setup
+                </a>
+            </li>
         </ul>
     </section>
 
+    <!-- SKILLS -->
     <section id="skills">
-        <h2>Skills</h2>
+        <h2>Core Skills</h2>
         <ul class="skills-list">
-            <li>✅ Docker & Kubernetes</li>
-            <li>✅ CI/CD Pipelines</li>
-            <li>✅ AWS Terraform & Cloud Automation</li>
-            <li>✅ Monitoring with Prometheus & Grafana</li>
+            <li>Docker & Kubernetes</li>
+            <li>GitHub Actions & CI/CD</li>
+            <li>Linux & Networking</li>
+            <li>Cloud & Infrastructure Automation</li>
+            <li>Monitoring & Debugging</li>
         </ul>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact">
         <h2>Contact</h2>
-        <p>Email: <a href="felixoppong1002@gmail.com">felixoppong1002@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/felixopk" target="_blank">www.linkedin.com/in/felixopk</a></p>
-
-        <p>GitHub: <a href="https://github.com/felixopk" target="_blank">https://github.com/felixopk</a></p>
+        <p>Email:
+            <a href="mailto:felixoppong1002@gmail.com">
+                felixoppong1002@gmail.com
+            </a>
+        </p>
+        <p>LinkedIn:
+            <a href="https://www.linkedin.com/in/felixopk" target="_blank">
+                linkedin.com/in/felixopk
+            </a>
+        </p>
+        <p>GitHub:
+            <a href="https://github.com/felixopk" target="_blank">
+                github.com/felixopk
+            </a>
+        </p>
     </section>
 
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2025 Felix Oppong | OPKCloudz</p>
+        <p>&copy; 2025 Felix Oppong · OPKCloudz</p>
     </footer>
+
 </body>
 </html>
